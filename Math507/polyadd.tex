@@ -1,0 +1,37 @@
+
+% This LaTeX was auto-generated from an M-file by MATLAB.
+% To make changes, update the M-file and republish this document.
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{color}
+
+\sloppy
+\definecolor{lightgray}{gray}{0.5}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+    
+    \begin{verbatim}
+function[c] = polyadd(p,q)
+if length(p) > length(q)
+    q=[zeros(1,length(p)-length(q)),q];
+elseif length(q) > length(p)
+    p=[zeros(q,length(q)-length(p)),q];
+end
+
+a=wrev(p); b=wrev(q);
+y=a+b;
+u=wrev(y);
+c=poly2sym(u,'x');
+\end{verbatim}
+
+        \color{lightgray} \begin{verbatim}Error using polyadd (line 2)
+Not enough input arguments.
+\end{verbatim} \color{black}
+    
+
+
+\end{document}
+    
